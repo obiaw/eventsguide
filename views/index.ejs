@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  	 <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+     <title><%= title %></title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" type="text/css" href="/css/bootstrap.min4.css">
+  	 <!-- Custom CSS -->
+    <link rel='stylesheet' href='/css/style.css' />
+
+  </head>
+  <body>
+
+  <section>
+  	 <div class="container">
+   		<div class="row">
+   			<div class="col-md-6 mx-auto white-bg">
+				<form action="/PurchaseTicket" method="POST" id="process_tickets">
+				<fieldset class="form-group">
+				<label class="form-control-label">Choose Ticket Type</label>
+					<select class="form-control" name="type" id="type">
+						<option value="V.I.P">VIP</option>
+						<option value="Ordinary">Ordinary</option>
+						<option value="Adults">Adults</option>
+						<option value="Children">Children</option>
+					</select>
+				</fieldset>
+				<fieldset class="form-group">
+				<label class="form-control-label">How many Tickets?</label>
+				<select class="form-control" name="no_of_tickets" id="no_of_tickets">
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+				</select>
+
+				</fieldset>
+				<fieldset>
+					<div class="payment">
+						<h2>Payment Method</h2>
+						<ul>
+						<li>
+						<input type="radio" checked="true" value="Airtel Mobile Money" id="aitrel" name="pay">
+						<label for="aitrel">Airtel Money</label>
+						<div class="check"></div>
+						</li>
+
+						<li>
+						<input type="radio" value="Mtn Mobile Money" id="mtn" name="pay">
+						<label for="mtn">MTN Mobile Money</label>
+						<div class="check"><div class="inside"></div></div>
+						</li>
+
+						<li>
+						<input type="radio" value="Credit Card" id="card" name="pay">
+						<label for="card">Credit Card</label>
+						<div class="check"><div class="inside"></div></div>
+						</li>
+						</ul>
+						</div>
+				</fieldset>
+				<hr>
+					<fieldset>
+						<div class="row">
+							<div class="col-sm-4 mx-auto">
+								<button type="submit" name="submit" id="submit"  class="btn btn-success">Purchase Ticket Now</button>
+							</div>
+						</div>
+					</fieldset>
+				</form>
+
+				<div class="box">
+				<div class='inner'>
+				<h1>Blankets &amp; Wines</h1>
+				<div class='info clearfix'>
+				<div class='wp'>Ticket(s)<h2>1</h2></div>
+				<div class='wp'>Type<h2>VIP</h2></div>
+				<div class='wp'>Unit Price<h2>100,000</h2></div>
+				</div>
+				<div class='total clearfix'>
+				<h2>Total : <p><small>UGX</small>100,000</p></h2>
+				</div>
+				</div>
+				</div>
+
+   			</div>
+   		</div>
+   </div>
+  </section>
+
+<script type="text/javascript" src="/js/jquery.min.js"></script>
+<script type="text/javascript" src="/js/popper.min.js"> </script>
+<script  type="text/javascript" src="/js/bootstrap.min4.js"></script>
+<script type="text/javascript" src="/js/tickets.js"></script>
+
+  </body>
+</html>
