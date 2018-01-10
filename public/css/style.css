@@ -192,8 +192,17 @@ by the way it is so weird when you look at your code a couple of years after you
 	color: #232323;
 	font-weight: bold;
 }
+.form-message{
+  display: none;
+}
+.result{
+  text-align: center;
+}
+.ticket{
+  display: none;
 
-	.box{
+}
+.box{
         margin:0px auto;
         margin-top:20px;
         background:#FFF9EE url(https://subtlepatterns.com/patterns/lightpaperfibers.png);

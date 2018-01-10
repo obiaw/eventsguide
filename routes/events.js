@@ -30,14 +30,19 @@ router.post('/PurchaseTicket',function(req,res){
 		}
 		else{
 			console.log(tickets);
-			 data = {'message': 'Ticket(s) processed successfully!'};
+			 data = {'message': 'Ticket(s) processed successfully, Thank you!'};
              return res.send(data.message);
 		}
 
 	});
 
-
-
 });
+
+function getData(req,res){
+
+	var db = req.db;
+	var tickets = db.get('ticketscollection');
+	
+}
 
 module.exports = router;

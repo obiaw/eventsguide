@@ -23,7 +23,7 @@ function purchase(){
         	form_data.no_of_tickets = tc_no;
         	form_data.pay = airtel;
         	form_data.amount = amount;
-
+        	 //$('.form-message').fadeIn("Slow");
          	  $.ajax({
 					url: "/PurchaseTicket",
 					type: "POST",
@@ -34,7 +34,10 @@ function purchase(){
 						alert(response.err);
 					}
 					else {
-						alert(JSON.stringify(form_data) +'\n\n' + response);
+                  		//$('.form-message').fadeOut("Slow");
+                  		$('div.result').html(response).fadeIn('Slow');
+                  		$('div.ticket').fadeIn('Slow');
+                  		$('#process_tickets').fadeOut('Fast');
 					}
 					},
 					error:function(XHR, status, response){
