@@ -38,6 +38,13 @@ router.post('/PurchaseTicket',function(req,res){
 
 });
 
+router.get('/events', function(req,res,next){
+
+	res.render('events',{title:'My Ticket'});
+	
+});
+
+
 function getData(req,res){
 
 	var db = req.db;
